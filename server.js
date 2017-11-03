@@ -1,8 +1,12 @@
-// Require Dependencies
-var express = require('express');
-var mongoose = require('mongoose');
+// =============================================================================
+
+// Dependencies
+
+// =============================================================================
+var express           = require('express');
+var mongoose          = require('mongoose');
 var expressHandlebars = require('express-handlebars');
-var bodyParser = require('body-parser');
+var bodyParser        = require('body-parser');
 
 // Set up Port
 var PORT = process.env.PORT || 3000;
