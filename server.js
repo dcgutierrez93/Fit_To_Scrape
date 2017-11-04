@@ -11,6 +11,8 @@ var bodyParser        = require('body-parser');
 // Set up Port
 var PORT = process.env.PORT || 3000;
 
+var app = express();
+
 // Set up Express Router
 var router = express.Router();
 
