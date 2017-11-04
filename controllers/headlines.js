@@ -29,6 +29,17 @@ module.exports = {
     },
     get: function(query, cb) {
         Headline.find(query)
-            
+            .sort({
+                _id: -1
+            })
+            .exec(function(err, doc) {
+                cd(doc);
+            });
+
+    },
+    update: function(query, cb) {
+        Headline.update({ _id: query._id }, {
+            $set: query
+        }, {}, cb);
     }
-}
+};
