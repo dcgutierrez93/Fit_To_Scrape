@@ -1,23 +1,17 @@
-// *********************
-// Note Model
-// *********************
+// =============================================================================
 
-// Require mongoose
+// Note model
+
+// =============================================================================
 var mongoose = require('mongoose');
+var Schema   = mongoose.Schema;
 
-// Create Schema
-var Schema = mongoose.Schema;
-
-// Create the Note Schema
 var noteSchema = new Schema({
-  // The headline is the article associate with the note
   _headlineId: {
     type: Schema.Type.ObjectsId,
-    ref: "Headline"
+    ref : "Headline"
   },
-  // date is just a string
-  date: String,
-  // as a noteText
+  date    : String,
   noteText: String
 });
 
@@ -25,4 +19,4 @@ var noteSchema = new Schema({
 var Note = mongoose.model("Note", noteSchema);
 
 // Export on Note.
-module.exports = Note 
+module.exports = Note
